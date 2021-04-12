@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1200</width>
-    <height>800</height>
+    <width>1395</width>
+    <height>815</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -44,10 +44,10 @@
    <widget class="QGraphicsView" name="graphicsView">
     <property name="geometry">
      <rect>
-      <x>480</x>
-      <y>120</y>
-      <width>600</width>
-      <height>600</height>
+      <x>380</x>
+      <y>110</y>
+      <width>981</width>
+      <height>661</height>
      </rect>
     </property>
     <property name="cursor" stdset="0">
@@ -255,8 +255,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1200</width>
-     <height>21</height>
+     <width>1395</width>
+     <height>23</height>
     </rect>
    </property>
   </widget>
