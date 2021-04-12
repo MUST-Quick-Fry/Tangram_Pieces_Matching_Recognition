@@ -1,49 +1,10 @@
 # package
-from PyQt5.QtCore import Qt, QPointF
-from PyQt5.QtGui import QPolygonF
 from gui import *
 from PyQt5.QtWidgets import *
-
-# graphic item class
-class gItem:
-    vert = []  # vertex matrix
-    colorIndex = 0
-
-    def __init__(self, vertex, colorNumber):
-        self.vert = vertex
-        self.colorIndex = colorNumber
-        self.Item = QGraphicsPolygonItem()
-        self.item = QPolygonF()
-        self.Item.setFlag(QGraphicsItem.ItemIsSelectable)  # set selectable
-        self.Item.setFlag(QGraphicsItem.ItemIsMovable)  # set movable
-        self.drawItem()
-
-    def drawItem(self):
-        for i in range(0, len(self.vert), 2):
-            self.item.append(QPointF(self.vert[i], self.vert[i+1]))
-
-        self.Item.setPolygon(self.item)
-        self.setColor(color=self.colorIndex)
-
-    def setColor(self, color):
-        if color == 1:
-            self.Item.setBrush(Qt.red)
-        elif color == 2:
-            self.Item.setBrush(Qt.blue)
-        elif color == 3:
-            self.Item.setBrush(Qt.yellow)
-        elif color == 4:
-            self.Item.setBrush(Qt.green)
-        elif color == 5:
-            self.Item.setBrush(Qt.black)
-        elif color == 6:
-            self.Item.setBrush(Qt.cyan)
-        elif color == 7:
-            self.Item.setBrush(Qt.gray)
-        self.Item.brush()
+from graphicItem import gItem
 
 
-class Graphics(QMainWindow, Ui_MainWindow):
+class GUI_INIT(QMainWindow, Ui_MainWindow):
     UNIT = 100
     width = 5 * UNIT
     height = 5 * UNIT
@@ -51,7 +12,7 @@ class Graphics(QMainWindow, Ui_MainWindow):
     color = 0
 
     def __init__(self,parent=None):
-        super(Graphics, self).__init__(parent)
+        super(GUI_INIT, self).__init__(parent)
         self.setupUi(self)
 
         #namespace _translate
@@ -70,7 +31,7 @@ class Graphics(QMainWindow, Ui_MainWindow):
         self.comboBox.setItemText(11, _translate("MainWindow", "Case11"))
         self.comboBox.setItemText(12, _translate("MainWindow", "Case12"))
         self.comboBox.setItemText(13, _translate("MainWindow", "Case13"))
-        self.comboBox.currentIndexChanged.connect(self.draw_graphics)
+        self.comboBox.currentIndexChanged.connect(self.setCase)
 
         self.comboBox_2.setItemText(0, _translate("MainWindow", "Algorithm"))
         self.comboBox_2.setItemText(1, _translate("MainWindow", "DFS"))
@@ -80,7 +41,7 @@ class Graphics(QMainWindow, Ui_MainWindow):
         self.label_2.setText(_translate("MainWindow", "Quantity of Methods: "))
         self.label_3.setText(_translate("MainWindow", "7"))
 
-    def draw_graphics(self,text):
+    def setCase(self, text):
 
         # create a scene
         self.graphicsView.scene = QtWidgets.QGraphicsScene(0, 0, self.width, self.height)
