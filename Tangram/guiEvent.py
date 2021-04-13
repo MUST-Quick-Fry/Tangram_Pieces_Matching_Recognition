@@ -6,40 +6,15 @@ from graphicItem import gItem
 
 class GUI_INIT(QMainWindow, Ui_MainWindow):
     UNIT = 100
-    width = 5 * UNIT
-    height = 5 * UNIT
+    width = 8 * UNIT
+    height = 8 * UNIT
     coord = []
     color = 0
 
     def __init__(self,parent=None):
         super(GUI_INIT, self).__init__(parent)
         self.setupUi(self)
-
-        #namespace _translate
-        _translate = QtCore.QCoreApplication.translate
-        self.comboBox.setItemText(0, _translate("MainWindow", "Case"))
-        self.comboBox.setItemText(1, _translate("MainWindow", "Case1"))
-        self.comboBox.setItemText(2, _translate("MainWindow", "Case2"))
-        self.comboBox.setItemText(3, _translate("MainWindow", "Case3"))
-        self.comboBox.setItemText(4, _translate("MainWindow", "Case4"))
-        self.comboBox.setItemText(5, _translate("MainWindow", "Case5"))
-        self.comboBox.setItemText(6, _translate("MainWindow", "Case6"))
-        self.comboBox.setItemText(7, _translate("MainWindow", "Case7"))
-        self.comboBox.setItemText(8, _translate("MainWindow", "Case8"))
-        self.comboBox.setItemText(9, _translate("MainWindow", "Case9"))
-        self.comboBox.setItemText(10, _translate("MainWindow", "Case10"))
-        self.comboBox.setItemText(11, _translate("MainWindow", "Case11"))
-        self.comboBox.setItemText(12, _translate("MainWindow", "Case12"))
-        self.comboBox.setItemText(13, _translate("MainWindow", "Case13"))
         self.comboBox.currentIndexChanged.connect(self.setCase)
-
-        self.comboBox_2.setItemText(0, _translate("MainWindow", "Algorithm"))
-        self.comboBox_2.setItemText(1, _translate("MainWindow", "DFS"))
-        self.comboBox_2.setItemText(2, _translate("MainWindow", "BFS"))
-        self.comboBox_2.setItemText(3, _translate("MainWindow", "IDA"))
-        self.comboBox_2.setItemText(4, _translate("MainWindow", "A*"))
-        self.label_2.setText(_translate("MainWindow", "Quantity of Methods: "))
-        self.label_3.setText(_translate("MainWindow", "7"))
 
     def setCase(self, text):
 
@@ -50,37 +25,37 @@ class GUI_INIT(QMainWindow, Ui_MainWindow):
         if text=='Case1':
             self.graphicsView.scene.clear()
             # draw a big triangle
-            self.coord = [-1,4,3,4,1,2]  # position [x1, y1, x2, y2, x3, y3]
+            self.coord = [0,4,4,4,2,2]  # position [x1, y1, x2, y2, x3, y3]
             self.color = 1  # set color code
             self.graphicsView.scene.addItem(
                 gItem(vertex=[i * self.UNIT for i in self.coord], colorNumber=self.color).Item)
 
-            self.coord = [3,4,7,4,5,2]  # position [x1, y1, x2, y2, x3, y3]
+            self.coord = [4,4,8,4,6,2]  # position [x1, y1, x2, y2, x3, y3]
             self.color = 2  # set color code
             self.graphicsView.scene.addItem(
                 gItem(vertex=[i * self.UNIT for i in self.coord], colorNumber=self.color).Item)
 
-            self.coord = [3,4,2,3,4,3]
+            self.coord = [4,4,3,3,5,3]
             self.color = 3
             self.graphicsView.scene.addItem(
                 gItem(vertex=[i * self.UNIT for i in self.coord], colorNumber=self.color).Item)
 
-            self.coord = [2,1,3,2,3,0]
+            self.coord = [3,1,4,2,4,0]
             self.color = 4
             self.graphicsView.scene.addItem(
                 gItem(vertex=[i * self.UNIT for i in self.coord], colorNumber=self.color).Item)
 
-            self.coord = [3,0,3,2,5,2]
+            self.coord = [4,0,4,2,6,2]
             self.color = 5
             self.graphicsView.scene.addItem(
                 gItem(vertex=[i * self.UNIT for i in self.coord], colorNumber=self.color).Item)
 
-            self.coord = [1,2,2,1,3,2,2,3]
+            self.coord = [2,2,3,1,4,2,3,3]
             self.color = 6
             self.graphicsView.scene.addItem(
                 gItem(vertex=[i * self.UNIT for i in self.coord], colorNumber=self.color).Item)
 
-            self.coord = [2,3,4,3,5,2,3,2]
+            self.coord = [3,3,5,3,6,2,4,2]
             self.color = 7
             self.graphicsView.scene.addItem(
                 gItem(vertex=[i * self.UNIT for i in self.coord], colorNumber=self.color).Item)
@@ -236,37 +211,37 @@ class GUI_INIT(QMainWindow, Ui_MainWindow):
         elif text=='Case6':
             self.graphicsView.scene.clear()
             # draw a big triangle
-            self.coord = [0,6,0,2,2,4]  # position [x1, y1, x2, y2, x3, y3]
+            self.coord = [0,7,0,3,2,5]  # position [x1, y1, x2, y2, x3, y3]
             self.color = 1  # set color code
             self.graphicsView.scene.addItem(
                 gItem(vertex=[i * self.UNIT for i in self.coord], colorNumber=self.color).Item)
 
-            self.coord = [0,2,2,4,2,0]  # position [x1, y1, x2, y2, x3, y3]
+            self.coord = [0,3,2,5,2,1]  # position [x1, y1, x2, y2, x3, y3]
             self.color = 2  # set color code
             self.graphicsView.scene.addItem(
                 gItem(vertex=[i * self.UNIT for i in self.coord], colorNumber=self.color).Item)
 
-            self.coord = [2,0,2,2,3,1]
+            self.coord = [2,1,2,3,3,2]
             self.color = 3
             self.graphicsView.scene.addItem(
                 gItem(vertex=[i * self.UNIT for i in self.coord], colorNumber=self.color).Item)
 
-            self.coord = [4,0,3,1,5,1]
+            self.coord = [4,1,3,2,5,2]
             self.color = 4
             self.graphicsView.scene.addItem(
                 gItem(vertex=[i * self.UNIT for i in self.coord], colorNumber=self.color).Item)
 
-            self.coord = [3,1,5,1,3,3]
+            self.coord = [3,2,5,2,3,4]
             self.color = 5
             self.graphicsView.scene.addItem(
                 gItem(vertex=[i * self.UNIT for i in self.coord], colorNumber=self.color).Item)
 
-            self.coord = [3,-1,2,0,3,1,4,0]
+            self.coord = [3,0,2,1,3,2,4,1]
             self.color = 6
             self.graphicsView.scene.addItem(
                 gItem(vertex=[i * self.UNIT for i in self.coord], colorNumber=self.color).Item)
 
-            self.coord = [2,2,2,4,3,3,3,1]
+            self.coord = [2,3,2,5,3,4,3,2]
             self.color = 7
             self.graphicsView.scene.addItem(
                 gItem(vertex=[i * self.UNIT for i in self.coord], colorNumber=self.color).Item)
