@@ -1,0 +1,241 @@
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\geometry{left=1in,right=0.75in,top=1in,bottom=1in}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
+\definecolor{mygray}{gray}{.9}
+\definecolor{mypink}{rgb}{.99,.91,.95}
+\definecolor{mycyan}{cmyk}{.3,0,0,0}
+\usepackage{tabularx}
+\usepackage{enumerate}% \item 
+\usepackage{tabularx}% \table 
+\usepackage{booktabs}% 	\toprule
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{url}
+\makeatletter  
+\newif\if@restonecol  
+\makeatother  
+\let\algorithm\relax  
+\let\endalgorithm\relax  
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}%[ruled,vlined]{  
+\usepackage{algpseudocode}  
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}  % Use Input in the format of Algorithm  
+\renewcommand{\algorithmicensure}{\textbf{Output:}} % Use Output in the format of Algorithm  
+
+\usepackage{bm}% reference
+\usepackage{indentfirst} 
+%\setlength{\parindent}{2em} %2em
+\usepackage{listings}
+\lstset{
+	language=matlab,
+	tabsize=2,
+	numbers=left, 
+	numberstyle= \tiny, 
+	rulesepcolor=\color{red!20!green!20!blue!20},
+	keywordstyle=\color{blue!90}\bfseries , 
+	commentstyle=\color{red!10!green!70}\textit , 
+	frame=shadowbox,
+	breaklines=true,
+	extendedchars=false, 
+	title=\lstname
+}
+\usepackage{appendix}
+\usepackage{cite}
+\usepackage{hyperref}
+\hypersetup{
+	%hypertex=true,
+	colorlinks=true,
+	linkcolor=red,
+	anchorcolor=red,
+	citecolor=red
+	}
+
+\usepackage{caption}
+\captionsetup[figure]{labelfont={bf},
+                      labelformat={default},
+                      labelsep=period,name={Figure}
+                      }
+\captionsetup[table]{labelfont={bf},
+                      labelformat={default},
+                      labelsep=period,name={Table}
+                      }
+
+\usepackage{newtxtext}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{newtxmath} % must come after amsXXX
+\usepackage{graphicx}
+%\usepackage{xcolor}
+\usepackage{fancyhdr}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}{Definition}
+
+
+\renewcommand{\abstract}
+{
+\begin{center}
+	\textbf{Summary}
+\end{center}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\graphicspath{{.}}  % Place your graphic files in the same directory as your main document
+\DeclareGraphicsExtensions{.pdf, .jpg, .tif, .png}
+
+\pagestyle{fancy}
+% Uncomment the next line to generate a Table of Contents
+\tableofcontents 
+\newpage
+\setcounter{page}{1}
+\rhead{Page \thepage\ }
+
+\section{Conclusion}
+
+\begin{equation}
+	\begin{matrix}
+		0&0&0&0&1&0&0&0&0\\
+		0&0&0&1&2&1&0&0&0\\
+		0&0&1&2&2&2&1&0&0\\
+		0&1&2&2&2&2&2&1&0\\
+		1&1&1&1&1&1&1&1&1\\
+	\end{matrix}
+\end{equation}
+\begin{equation}
+	\begin{matrix}
+		1&1&1&1&1\\
+		1&2&2&2&1\\
+		1&2&2&2&1\\
+		1&2&2&2&1\\
+		1&1&1&1&1\\
+	\end{matrix}
+\end{equation}
+\begin{equation}
+	\begin{matrix}
+		0&0&0&0&1&0&0\\
+		0&0&0&1&2&1&0\\
+		0&0&1&2&2&2&1\\
+		0&1&2&2&2&1&0\\
+		1&2&2&2&1&0&0\\
+		0&1&2&1&0&0&0\\
+		0&0&1&0&0&0&0\\
+	\end{matrix}
+\end{equation}
+\begin{equation}
+	\begin{matrix}
+		0&0&0&0&1&1&1&1&1\\
+		0&0&0&1&2&2&2&1&0\\
+		0&0&1&2&2&2&1&0&0\\
+		0&1&2&2&2&1&0&0&0\\
+		1&1&1&1&1&0&0&0&0\\
+	\end{matrix}
+\end{equation}
+\begin{equation}
+	\begin{matrix}
+		0&0&1&1&1&1&1\\
+		0&1&2&2&2&1&0\\
+		1&2&2&2&1&0&0\\
+		1&2&2&1&0&0&0\\
+		1&2&1&0&0&0&0\\
+		1&1&0&0&0&0&0\\
+		1&0&0&0&0&0&0\\
+	\end{matrix}
+\end{equation}
+\begin{equation}
+	\begin{matrix}
+		0&0&0&1&0&0\\
+		0&0&1&2&1&0\\
+		0&1&2&2&2&1\\
+		1&2&2&2&1&0\\
+		1&2&2&1&0&0\\
+		1&2&1&0&0&0\\
+		1&1&0&0&0&0\\
+		1&0&0&0&0&0\\
+	\end{matrix}
+\end{equation}
+\begin{equation}
+	\begin{matrix}
+		1&1&1&0&0&0&0\\
+		1&2&2&1&0&0&0\\
+		1&2&2&2&1&0&0\\
+		1&2&2&2&2&1&0\\
+		1&1&1&1&1&1&1\\
+	\end{matrix}
+\end{equation}
+
+\begin{equation}
+	\begin{matrix}
+		0&0&0&1&1&1&1&1\\
+		0&0&1&2&2&2&2&1\\
+		0&1&2&2&2&2&2&1\\
+		1&1&1&1&1&1&1&0\\
+	\end{matrix}
+\end{equation}
+
+\begin{equation}
+	\begin{matrix}
+		1&1&1&1&1&0\\
+		1&2&2&2&2&1\\
+		1&2&2&2&1&0\\
+		1&2&2&1&0&0\\
+		1&2&1&0&0&0\\
+		0&1&0&0&0&0\\
+	\end{matrix}
+\end{equation}
+
+\begin{equation}
+	\begin{matrix}
+		0&0&1&1&1&0&0\\
+		0&1&2&2&2&1&0\\
+		1&2&2&2&2&2&1\\
+		0&1&2&2&2&1&0\\
+		0&0&1&1&1&0&0\\
+	\end{matrix}
+\end{equation}
+
+\begin{equation}
+	\begin{matrix}
+		0&0&1&1&1&1&1&0\\
+		0&1&2&2&2&2&2&1\\
+		1&2&2&2&2&2&1&0\\
+		0&1&1&1&1&1&0&0\\
+	\end{matrix}
+\end{equation}
+
+\begin{equation}
+	\begin{matrix}
+		0&1&1&1&0&0\\
+		1&2&2&2&1&0\\
+		1&2&2&2&2&1\\
+		1&2&2&2&1&0\\
+		0&1&2&1&0&0\\
+		0&0&1&0&0&0\\
+	\end{matrix}
+\end{equation}
+
+\begin{equation}
+	\begin{matrix}
+		0&0&0&1&1&1\\
+		0&0&1&2&2&1\\
+		0&1&2&2&2&1\\
+		1&2&2&2&1&0\\
+		1&2&2&1&0&0\\
+		1&1&1&0&0&0\\
+	\end{matrix}
+\end{equation}
+
+
+\bibliographystyle{plain}
+\bibliography{}
+
+\newpage
+\appendix
+\appendixpage
+\addappheadtotoc
+
+
+\end{document}
+\end
