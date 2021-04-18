@@ -13,7 +13,7 @@ void bfs(int kase,const Shape& start){
         //cout << top.size();
         if (top.size() == 7) {
             for (auto &it:top) {
-                cout << it;
+                cout << it << ' ';
             }
             cout << '\n';
            res.emplace_back(top);
