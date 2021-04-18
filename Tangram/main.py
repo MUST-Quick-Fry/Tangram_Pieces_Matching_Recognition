@@ -1,3 +1,4 @@
+# main contributor: Kennard
 
 from PyQt5.QtWidgets import *
 from guiEvent import GUI_INIT
