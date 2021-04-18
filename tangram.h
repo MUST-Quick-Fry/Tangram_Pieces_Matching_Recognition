@@ -40,7 +40,6 @@ public:
         for(auto it:s.v){
             out<<it;
         }
-        out<<'\n';
         return out;
     }
 };
