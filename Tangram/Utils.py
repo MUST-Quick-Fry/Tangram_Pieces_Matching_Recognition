@@ -4,8 +4,8 @@ import os
 
 def exeParse(arg1, arg2):
     print("start")
-    #cmd = "Tangram.exe " + str(arg1) + " " + str(arg2)
-    cmd = "./Tangram " + str(arg1) + " " + str(arg2)
+    cmd = "Tangram.exe " + str(arg1) + " " + str(arg2)  # Windows
+    #cmd = "./Tangram " + str(arg1) + " " + str(arg2)  # Linux
     data = os.popen(cmd).readlines()
 
     anslist = []
