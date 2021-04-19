@@ -42,10 +42,13 @@
     </property>
    </widget>
    <widget class="QGraphicsView" name="graphicsView">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
-      <x>380</x>
-      <y>110</y>
+      <x>370</x>
+      <y>100</y>
       <width>981</width>
       <height>661</height>
      </rect>
@@ -188,11 +191,6 @@
     </property>
     <item>
      <property name="text">
-      <string>Algorithm</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
       <string>DFS</string>
      </property>
     </item>
@@ -203,21 +201,21 @@
     </item>
     <item>
      <property name="text">
-      <string>IDA</string>
+      <string>A*</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>A*</string>
+      <string>SA</string>
      </property>
     </item>
    </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>320</y>
-      <width>261</width>
+      <x>100</x>
+      <y>330</y>
+      <width>131</width>
       <height>51</height>
      </rect>
     </property>
@@ -227,15 +225,15 @@
      </font>
     </property>
     <property name="text">
-     <string>Quantity of Methods: </string>
+     <string>Methods : </string>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>320</y>
-      <width>31</width>
+      <x>240</x>
+      <y>330</y>
+      <width>81</width>
       <height>51</height>
      </rect>
     </property>
@@ -245,7 +243,7 @@
      </font>
     </property>
     <property name="text">
-     <string>7</string>
+     <string>0</string>
     </property>
    </widget>
   </widget>
@@ -256,7 +254,7 @@
      <x>0</x>
      <y>0</y>
      <width>1395</width>
-     <height>23</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

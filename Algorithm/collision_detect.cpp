@@ -50,7 +50,7 @@ bool not_overlap(const Shape &s, const vector<Shape>& ans){
 
 bool check(int kase,const Shape &s){
     for(auto it:s.v){
-        if(it.x<0 || it.y<0 || it.x>8 || it.y>9 || !matrix[kase][(int)it.x][(int)it.y]) {
+        if(it.x<0 || it.y<0 || it.x>7 || it.y>8 || !matrix[kase][(int)it.x][(int)it.y]) {
             return false;
         }
     }

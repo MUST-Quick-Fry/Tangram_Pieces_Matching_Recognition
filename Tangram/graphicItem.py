@@ -1,8 +1,8 @@
-# package
+# main contributor: Kennard
+
 from PyQt5.QtCore import Qt, QPointF
 from PyQt5.QtGui import QPolygonF
 from PyQt5.QtWidgets import *
-
 
 # graphic item class
 class gItem:

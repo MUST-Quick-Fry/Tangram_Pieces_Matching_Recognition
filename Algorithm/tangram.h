@@ -23,7 +23,7 @@ public:
         return Point(this->x-p.x,this->y-p.y);
     }
     friend ostream& operator << (ostream &out, const Point &p){
-        out<<p.x<<' '<<p.y<<' ';
+        out << p.y << p.x;
         return out;
     }
 };

@@ -18,7 +18,7 @@ void dfs(int kase,int depth){
 //    }
     if(depth==7){
         for(auto &it:ans){
-            cout<<it;
+            cout << it << ' ';
         }
         cout<<'\n';
     }
