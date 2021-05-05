@@ -15,10 +15,10 @@ bool sa_evaluate(int kase, int posX, int posY, int depth){
     else {
         srand(time(0));
         
-        double threshold = rand() % 100 / (double)101;         
+        double threshold = rand() % 99 / (double)99;         
         //cout << threshold << endl;
 
-        if (exp((2 - cur) / (7 - depth)) >= threshold) { return true; }
+        if (exp((cur - 2.05) / (7 - depth)) > threshold) { return true; }
         else { return false; }
     }
 }

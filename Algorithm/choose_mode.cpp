@@ -14,7 +14,7 @@ void choose_mode(int kase,int way){//first parameter 1-13, second parameter 1-4
             bfs(kase,0);
             break;
         case 3:
-            ida(kase,0,0);
+            Astar(kase,0,0);
             break;
         case 4:
             SA(kase, 0);
