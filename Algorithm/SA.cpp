@@ -9,16 +9,16 @@ using namespace std;
 
 vector<vector<Shape>> sa_res;
 
-bool sa_evaluate(int kase, int posX, int posY, int depth){
+bool sa_evaluate(int kase, int posX, int posY, int depth) {
     int cur = matrix[kase][posX][posY];
     if (cur == 0) { return false; }
     else {
         srand(time(0));
-        
-        double threshold = rand() % 99 / (double)99;         
+
+        double threshold = rand() % 100 / (double)100;
         //cout << threshold << endl;
 
-        if (exp((cur - 2.05) / (7 - depth)) > threshold) { return true; }
+        if (exp((cur - 2.01) / depth) > threshold) { return true; }
         else { return false; }
     }
 }
