@@ -3,9 +3,7 @@
 #include "tangram.h"
 using namespace std;
 vector<Shape> ans;
-vector<vector<Shape>> v;
 int vis[8][10];
-
 
 
 void dfs(int kase,int depth){

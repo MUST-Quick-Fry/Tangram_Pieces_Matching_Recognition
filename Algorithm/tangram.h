@@ -316,7 +316,10 @@ void choose_mode(int kase,int way);
 void dfs(int kase,int depth);
 void bfs(int kase,int start);
 void ida(int kase,int depth,int maxed);
+void SA(int kase, int start);
 bool not_overlap(const Shape &s1,const Shape &s2);
 bool not_overlap(const Shape &s, const vector<Shape>& ans);
 bool check(int kase,const Shape &s);
+
+bool sa_evaluate(int kase, int posX, int posY, int depth);
 #endif //TANGRAM_TANGRAM_H

@@ -2,6 +2,8 @@
 #include <queue>
 #include <vector>
 vector<vector<Shape>> res;
+
+
 void bfs(int kase,const Shape& start){
     queue<vector<Shape>> q;
     vector<Shape> v;
