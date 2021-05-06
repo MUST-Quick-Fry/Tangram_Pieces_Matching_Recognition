@@ -3,4 +3,4 @@ project(Tangram)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Tangram main.cpp tangram.h dfs.cpp bfs.cpp IDA.cpp choose_mode.cpp collision_detect.cpp)
+add_executable(Tangram main.cpp tangram.h dfs.cpp bfs.cpp Astar.cpp SA.cpp choose_mode.cpp collision_detect.cpp)
