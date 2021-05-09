@@ -18,7 +18,7 @@ bool sa_evaluate(int kase, int posX, int posY, int depth) {
         double threshold = rand() % 100 / (double)100;
         //cout << threshold << endl;
 
-        if (exp((cur - 2.01) / depth) > threshold) { return true; }
+        if (exp((cur - 2.0) / depth) > threshold) { return true; }
         else { return false; }
     }
 }
@@ -42,7 +42,7 @@ void SA(int kase, const Shape& start) {
             continue;
         }
         for (int i = 0; i < 8; i++)
-            for (int j = 0; j < 9; j++) {
+            for (int j = 8; j >= 0; j--) {
                 switch (top.size()) {
                 case 1:
                     if (sa_evaluate(kase, i, j, (int)top.size())) {
@@ -112,7 +112,7 @@ void SA(int kase, const Shape& start) {
 }
 void SA(int kase, int start) {
     for (int i = 0; i < 8; i++) {
-        for (int j = 0; j < 9; j++) {
+        for (int j=8;j>=0;j--) {
             if (matrix[kase][i][j] == 2) {
                 SA(kase, Square(Point(i, j)));
             }

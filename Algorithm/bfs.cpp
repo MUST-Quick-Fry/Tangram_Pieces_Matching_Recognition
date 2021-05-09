@@ -22,7 +22,7 @@ void bfs(int kase,const Shape& start){
             continue;
        }
         for (int i = 0; i < 8; i++)
-            for (int j = 0; j < 9; j++) {
+            for (int j = 8; j >= 0; j--) {
                 switch (top.size()) {
                     case 1:
                         if (matrix[kase][i][j] == 2) {
@@ -92,7 +92,7 @@ void bfs(int kase,const Shape& start){
 }
 void bfs(int kase,int start){
     for(int i=0;i<8;i++){
-        for(int j=0;j<9;j++){
+        for(int j=8;j>=0;j--){
             if(matrix[kase][i][j]==2){
                 bfs(kase,Square(Point(i,j)));
             }
