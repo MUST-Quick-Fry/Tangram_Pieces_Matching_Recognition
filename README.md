@@ -1,9 +1,9 @@
 # Tangram Pieces Matching Recognition
 Project of CO105 Fundamentals of Artificial Intelligence
 # Authors
-    CHEN YUXUAN 1809853J-I011-0011  
-    HE PEILIN 1809853U-I011-0078  
-    WANG YUYANG 1809853Z-I011-0045  
+    1809853J-I011-0011 CHEN YUXUAN  
+    1809853U-I011-0078 HE PEILIN  
+    1809853Z-I011-0045 WANG YUYANG  
 # Team cooperation
 Tasks completed by each person are documented below:
 
@@ -24,7 +24,6 @@ The detailed information of programming environment are listed in table :
 |IDE | Visual Studio Code & PyCharm|
 |Third-party libraries| PyQt 5.15.2 & pyqt5-tools 5.15.2.3.0.2|
 |Supporting architecture| 32 & 64|
-
 |Required DLL|`msvcp140d.dll` , `ucrtbased.dll` and `vcruntime140d.dll`|
 
 # How to compile and execute
