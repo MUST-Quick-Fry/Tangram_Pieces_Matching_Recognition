@@ -1,5 +1,5 @@
 # Tangram Pieces Matching Recognition
-Project of CO105 Fundamentals of Artificial Intelligence
+Project of CS105 Fundamentals of Artificial Intelligence
 # Authors
     1809853J-I011-0011 CHEN YUXUAN  
     1809853U-I011-0078 HE PEILIN  
